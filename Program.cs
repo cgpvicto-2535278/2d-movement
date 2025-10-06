@@ -10,6 +10,9 @@
             int.TryParse(Console.ReadLine(), out int taille);
             Console.WriteLine("Speed");
             int.TryParse(Console.ReadLine(), out int vitesse);
+            Console.WriteLine("WASD to move");
+            Thread.Sleep(3000);
+            Console.Clear();
             string[,] tableau2d = new string[taille, taille];
             for (int i = 0; i < taille; i++)
             {
