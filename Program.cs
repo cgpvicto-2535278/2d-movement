@@ -11,7 +11,7 @@
             Console.WriteLine("Speed");
             int.TryParse(Console.ReadLine(), out int vitesse);
             Console.WriteLine("WASD to move");
-            Thread.Sleep(3000);
+            Thread.Sleep(500);
             Console.Clear();
             string[,] tableau2d = new string[taille, taille];
             for (int i = 0; i < taille; i++)
@@ -22,7 +22,7 @@
                 }
                 Console.WriteLine();
             }
-            tableau2d[0, 0] = "#";
+            tableau2d[0, 0] = "@";
             while (true)
             {
                 Console.Clear();
@@ -39,25 +39,53 @@
                 {
                     tableau2d[y, x] = ".";
                     x = x + vitesse;
-                    tableau2d[y, x] = "#";
+                    tableau2d[y, x] = "@";
                 }
                 else if (dir == 'a')
                 {
                     tableau2d[y, x] = ".";
                     x = x - vitesse;
-                    tableau2d[y, x] = "#";
+                    tableau2d[y, x] = "@";
                 }
                 else if (dir == 's')
                 {
                     tableau2d[y, x] = ".";
                     y = y + vitesse;
-                    tableau2d[y, x] = "#";
+                    tableau2d[y, x] = "@";
                 }
                 else if (dir == 'w')
                 {
                     tableau2d[y, x] = ".";
                     y = y - vitesse;
-                    tableau2d[y, x] = "#";
+                    tableau2d[y, x] = "@";
+                }
+                else if (dir == 'q')
+                {
+                    tableau2d[y, x] = ".";
+                    y = y - vitesse;
+                    x = x - vitesse;
+                    tableau2d[y, x] = "@";
+                }
+                else if (dir == 'e')
+                {
+                    tableau2d[y, x] = ".";
+                    y = y - vitesse;
+                    x = x + vitesse;
+                    tableau2d[y, x] = "@";
+                }
+                else if (dir == 'z')
+                {
+                    tableau2d[y, x] = ".";
+                    y = y + vitesse;
+                    x = x - vitesse;
+                    tableau2d[y, x] = "@";
+                }
+                else if (dir == 'c')
+                {
+                    tableau2d[y, x] = ".";
+                    y = y + vitesse;
+                    x = x + vitesse;
+                    tableau2d[y, x] = "@";
                 }
             }
         }
